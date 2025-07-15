@@ -6,6 +6,8 @@ import Navbar from './components/Navbar'
 import MyAppointment from './pages/MyAppointment'
 import MyProfile from './pages/MyProfile'
 import Header from './components/Header'
+import Footer from './components/Footer'
+import Doctors from './pages/Doctors'
 
 const App = () => {
   return (
@@ -13,6 +15,8 @@ const App = () => {
     <Navbar/>
      <Routes>
     <Route path='/' element={<Home/>}/>
+    <Route path='/doctors' element={<Doctors/>}/>
+     <Route path='/doctors/:speciality' element={<Doctors/>}/>
     <Route path='/login' element={<Login/>}/>
      <Route path='/my-profile' element={<MyProfile/>}/>
       <Route path='/my-appointments' element={<MyAppointment/>}/>
@@ -21,6 +25,7 @@ const App = () => {
        
 
      </Routes>
+     <Footer/>
     </div>
   )
 }
